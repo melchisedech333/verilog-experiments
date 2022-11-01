@@ -1,14 +1,10 @@
 
-/**
- * Iesus Hominum Salvator.
- */
-
 module tests();
     
     reg  inp;
     wire out;
 
-    gate_not u0( .inp(inp), .out(out) );
+    switch u0( .inp(inp), .out(out) );
 
     initial begin
         $dumpfile("wave.vcd");
@@ -16,9 +12,12 @@ module tests();
 
         inp <= 0;
 
-        $monitor("GATE-NOT -> input: %0b, output: %0b", inp, out);
+        $monitor("SWITCH DEVICE -> input: %0b, output: %0b", inp, out);
 
         #10 inp <= 1;
+        #10 inp <= 0;
+        #10 inp <= 1;
+        #10 inp <= 0;
     end
 
 endmodule
