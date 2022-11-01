@@ -3,14 +3,15 @@
  * Iesus Hominum Salvator.
  */
 
-module gate_not ( vdd, gnd, inp, out );
+module gate_not ( inp, out );
     
-    input  vdd;
+    supply0 gnd;
+    supply1 vdd;
+
     input  inp;
     output out;
-    output gnd;
 
-    // Logic:
+    // Transistor logic:
     //   output, input,   control
     
     // PNP

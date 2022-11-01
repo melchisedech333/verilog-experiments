@@ -3,12 +3,13 @@
  * Iesus Hominum Salvator.
  */
 
-module device (vdd, gnd, inp, out);
+module device (inp, out);
 
-    input  vdd;
+    supply0 gnd;
+    supply1 vdd;
+
     input  inp;
     output out;
-    output gnd;
 
     // Logic:
     //   output, input,   control
@@ -16,8 +17,6 @@ module device (vdd, gnd, inp, out);
     // NPN
     //   source  drain    gate
     nmos(out,    vdd,     inp);
-
-    nmos(gnd);
 
 endmodule
 
