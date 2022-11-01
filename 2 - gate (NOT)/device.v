@@ -1,6 +1,8 @@
 
 /**
  * Iesus Hominum Salvator.
+ *
+ * This is another NOT-Gate.
  */
 
 module device (inp, out);
@@ -11,12 +13,17 @@ module device (inp, out);
     input  inp;
     output out;
 
-    // Logic:
+    // Transistor logic:
     //   output, input,   control
     
+    // PNP
+    //   drain   source   gate
+    pmos(out,    vdd,     inp);
+
     // NPN
     //   source  drain    gate
-    nmos(out,    vdd,     inp);
+    // nmos(gnd,    out,     inp);
+    nmos(out,    gnd,     inp);
 
 endmodule
 
