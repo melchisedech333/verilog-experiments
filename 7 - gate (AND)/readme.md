@@ -4,7 +4,7 @@ Schematic:
 <table>
 <tr>
 <td valign="top">
-    <img src="extras/and3.png" width="600px" />
+    <img src="extras/and3.png" width="400px" />
 </td>
 <td valign="top">
     <img src="extras/and2.png" width="300px" />
