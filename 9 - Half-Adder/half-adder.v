@@ -1,23 +1,26 @@
 
 /*
- * Transistor logic: output, input, control
- * PNP: drain, source, gate
- * NPN: source, drain, gate
- *
- * IHS <3
+ * Santa Maria s2
  */
 
 module half_adder (inp1, inp2, out, carry);
-
-    supply0 gnd;
-    supply1 vdd;
 
     input  inp1;
     input  inp2;
     output out;
     output carry;
 
+    gate_xor x1(
+        .inp1(inp1),
+        .inp2(inp2),
+        .out(out)
+    );
     
+    gate_and a1(
+        .inp1(inp1),
+        .inp2(inp2),
+        .out(carry)
+    );
 
 endmodule
 

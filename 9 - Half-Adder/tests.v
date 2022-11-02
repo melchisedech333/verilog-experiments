@@ -18,10 +18,11 @@ module tests();
         input1 <= 0;
         input2 <= 0;
 
-        $display("---------------------");
-        $display("INPUT -> 1 | 2 = OUT");
-        $display("---------------------");
-        $monitor(" HF   -> %0b | %0b = %0b", input1, input2, out);
+        $display("-----------------------------");
+        $display("         A | B | SUM | CARRY");
+        $display("-----------------------------");
+        $monitor(" HF   -> %0b | %0b |  %0b  | %0b", 
+            input1, input2, out, carry);
 
         #10 input2 <= 1;
         #10 input1 <= 1;
